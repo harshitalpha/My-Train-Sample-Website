@@ -1,0 +1,17 @@
+{% extends "layout.html" %}
+
+{% block content %}
+  <br><br>
+  <div class="container">
+    <br><br>
+    <form action="" method="POST">
+      <div class="form-group">
+        <label for="p_id">Passenger Id :- </label>
+        <input type="integer" name="pid" class="form-control" placeholder="Enter Your Id">
+        <br>
+        <center><button type="submit" class="btn btn-primary">{{message}}</button></center>
+      </div>
+    </form>
+  </div>
+
+{% endblock %}

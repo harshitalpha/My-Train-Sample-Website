@@ -1,0 +1,71 @@
+{% extends "layout.html" %}
+
+{% block style %}
+
+  <style media="screen">
+    table{
+          border: 2px solid black;
+          width : 100%;
+          border-collapse: collapse;
+          text-align : center;
+          }
+    th, td{
+      border : 1px solid black;
+      text-align : center;
+      height : 50px;
+    }
+    th{
+        background: #168eff;
+        color : black;
+      }
+      .abc{
+        color : white;
+        background : #168eff;
+      }
+  </style>
+
+{% endblock %}
+
+{% block content %}
+  <br><br>
+    <div class="container">
+    <br><br>
+      <table>
+        <tr>
+          <td class="abc">Your Id :-</td>
+          <td>{{p_id[0]}}</td>
+        </tr>
+        <tr>
+          <td class="abc">Name :-</td>
+          <td>{{detail['name']}}</td>
+        </tr>
+        <tr>
+          <td class="abc">Email :-</td>
+          <td>{{detail['email']}}</td>
+        </tr>
+        <tr>
+          <td class="abc">Age :-</td>
+          <td>{{detail['age']}}</td>
+        </tr>
+        {% for train in train_detail %}
+        <tr>
+          <td class="abc">Train Id :-</td>
+          <td>{{train[0]}}</td>
+        </tr>
+        <tr>
+          <td class="abc">Train Name :-</td>
+          <td>{{train[1]}}</td>
+        </tr>
+        <tr>
+          <td class="abc">Fare :-</td>
+          <td>{{train[6]}}</td>
+        </tr>
+        {% endfor %}
+      </table>
+    </div>
+    <br>
+    <div class="container">
+      <center><a class="btn btn-primary" href="{{ url_for('payment',train_id=detail['train_id'],id=p_id[0]) }}" role="button">Pay Money</a></center>
+    </div>
+
+{% endblock %}

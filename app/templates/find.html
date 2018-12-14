@@ -1,0 +1,19 @@
+{% extends "layout.html" %}
+
+{% block content %}
+  <div class="container">
+      <b><i><u><h1>Find Train Between station </h1></u></i></b>
+      <br>
+      <form method='POST' action=''>
+        <div class="form-group">
+          <label for="origin">From : </label>
+          <input type="text" class="form-control" name="origin" placeholder="Enter origin">
+        </div>
+        <div class="form-group">
+          <label for="destination">To :</label>
+          <input type="text" class="form-control" name="destination" placeholder="Enter destination">
+        </div>
+        <button type="submit" class="btn btn-primary">Find</button>
+      </form>
+  </div>
+{% endblock %}

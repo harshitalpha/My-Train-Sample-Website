@@ -1,0 +1,61 @@
+{% extends "layout.html" %}
+
+{% block style %}
+
+  <style media="screen">
+    table{
+          border: 2px solid black;
+          width : 100%;
+          border-collapse: collapse;
+          text-align : center;
+          }
+    th, td{
+      border : 1px solid black;
+      text-align : center;
+      height : 50px;
+    }
+    .abc{
+      color : white;
+      background : #168eff;
+    }
+  </style>
+
+{% endblock %}
+
+{% block content %}
+<br><br>
+<div class="container">
+  <br><br>
+  <table>
+    <tr>
+      <td class="abc">Your Id :-</td>
+      <td>{{p_detail[0]}}</td>
+    </tr>
+    <tr>
+      <td class="abc">Name :-</td>
+      <td>{{p_detail[1]}}</td>
+    </tr>
+    <tr>
+      <td class="abc">Email :-</td>
+      <td>{{p_detail[3]}}</td>
+    </tr>
+    <tr>
+      <td class="abc">Age :-</td>
+      <td>{{p_detail[5]}}</td>
+    </tr>
+
+    <tr>
+      <td class="abc">Train Id :-</td>
+      <td>{{t_detail[0]}}</td>
+    </tr>
+    <tr>
+      <td class="abc">Train Name :-</td>
+      <td>{{t_detail[1]}}</td>
+    </tr>
+    <tr>
+      <td class="abc">Fare :-</td>
+      <td>{{t_detail[6]}}</td>
+    </tr>
+  </table>
+</div>
+{% endblock %}

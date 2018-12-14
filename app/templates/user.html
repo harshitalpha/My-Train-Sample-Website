@@ -1,0 +1,54 @@
+{% extends "layout.html" %}
+{% block style %}
+    <style>
+      table{
+            border: 2px solid black;
+            width : 100%;
+            border-collapse: collapse;
+            text-align : center;
+            }
+      th, td{
+      	border : 1px solid black;
+      	text-align : center;
+      	height : 50px;
+      }
+      th{
+        	background: #168eff;
+        	color : black;
+        }
+    </style>
+{% endblock %}
+{% block content %}
+  <br><br><br>
+    <div class="container">
+      {% if origin %}
+        <h2> Train Between {{ origin }} And {{ destination }} : </h2>
+      {% else %}
+        <h2> All Trains : </h2>
+      {% endif %}
+      <table>
+            <tr>
+              <th>Id </th>
+              <th>Name</th>
+              <th>origin</th>
+              <th>Destination </th>
+              <th>Start Time </th>
+              <th> End time </th>
+              <th>Fare</th>
+            </tr>
+              {% for train in trains %}
+                <tr>
+                  <td>{{train[0]}}</td>
+                  <td>{{train[1]}}</td>
+                  <td>{{train[2]}}</td>
+                  <td>{{train[5]}}</td>
+                  <td>{{train[3]}}</td>
+                  <td>{{train[4]}}</td>
+                  <td>{{ train[6] }}</td>
+                </tr>
+              {% endfor %}
+      </table>
+
+    </div>
+
+{% endblock %}

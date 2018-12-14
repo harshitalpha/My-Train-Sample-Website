@@ -1,0 +1,81 @@
+{% extends "layout.html" %}
+
+{% block style %}
+    <style>
+      .abc > div {
+        margin : 50px;
+        padding : 20px;
+      }
+      .abc {
+        display: flex;
+        flex-wrap: wrap;
+      }
+    </style>
+
+{% endblock %}
+
+{% block content %}
+
+<br><br><br><br>
+<div class="abc">
+
+  <div class="card" style="width: 18rem;">
+  <img class="card-img-top" src="t1.png">
+  <div class="card-body">
+  <h5 class="card-title">Train Between Station</h5>
+  <p class="card-text">You can find you train between two station here</p>
+  <a href="{{ url_for('find') }}" class="btn btn-primary">Find Train</a>
+  </div>
+  </div>
+
+  <div class="card" style="width: 18rem;">
+  <img class="card-img-top" src=".../100px180/" alt="Card image cap">
+  <div class="card-body">
+  <h5 class="card-title">Book Your Ticket</h5>
+  <p class="card-text">You can book Your Train Ticket here</p>
+  <a href="{{ url_for('book') }}" class="btn btn-primary">Book Ticket</a>
+  </div>
+  </div>
+
+  <div class="card" style="width: 18rem;">
+  <img class="card-img-top" src=".../100px180/" alt="Card image cap">
+  <div class="card-body">
+  <h5 class="card-title">Find Your Ticket Info</h5>
+  <p class="card-text">You can check your ticket status, train No., name, time here</p>
+  <a href="{{ url_for('status') }}" class="btn btn-primary">Find Status</a>
+  </div>
+  </div>
+
+
+  <div class="card" style="width: 18rem;">
+  <img class="card-img-top" src=".../100px180/" alt="Card image cap">
+  <div class="card-body">
+  <h5 class="card-title">Cancel Your Ticket</h5>
+  <p class="card-text">You can cancel Your ticket From Here</p>
+  <a href="{{ url_for('delete') }}" class="btn btn-primary">Cancel Ticket</a>
+  </div>
+  </div>
+
+  <div class="card" style="width: 18rem;">
+  <img class="card-img-top" src=".../100px180/" alt="Card image cap">
+  <div class="card-body">
+  <h5 class="card-title">View The Final List</h5>
+  <p class="card-text">You can view final list of passanger here</p>
+  <a href="{{ url_for('list') }}" class="btn btn-primary">Final List</a>
+  </div>
+  </div>
+
+
+  <div class="card" style="width: 18rem;">
+  <img class="card-img-top" src=".../100px180/" alt="Card image cap">
+  <div class="card-body">
+  <h5 class="card-title">View ALL trains</h5>
+  <p class="card-text">You can view Train list in our data base</p>
+  <a href="{{ url_for('whole') }}" class="btn btn-primary">View Trains</a>
+  </div>
+  </div>
+</div>
+
+
+
+{% endblock %}

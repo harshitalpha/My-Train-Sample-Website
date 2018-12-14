@@ -1,0 +1,66 @@
+{% extends "layout.html" %}
+
+
+{% block content %}
+  <br><br>
+  <div class="container">
+    <br>
+    <form action="" method="POST">
+      <div class="form-group">
+        <label for="name">Name :</label>
+        <input type="text" name="name" class="form-control" placeholder="Enter Name">
+      </div>
+
+
+
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="gender_choise"value="M" checked>
+        <label class="form-check-label" for="gender-male">
+          Male
+        </label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="gender_choise"  value="F">
+        <label class="form-check-label" for="gender-female">
+          Female
+        </label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="gender_choise" value="O">
+        <label class="form-check-label" for="gender-other">
+          Other
+        </label>
+      </div>
+
+
+      <br>
+      <div class="form-group">
+        <label for="email">Email :</label>
+        <input type="email" name="email" class="form-control" placeholder="Enter Email">
+      </div>
+
+
+      <div class="form-group">
+        <label for="mobile">Mobile No. :</label>
+        <input type="integer" name="mobile" class="form-control" placeholder="Enter Phone No.">
+      </div>
+
+
+      <div class="form-group">
+        <label for="age">Age :</label>
+        <input type="integer" name="age" class="form-control" placeholder="Enter age">
+      </div>
+
+
+      <div class="form-group">
+        <label for="train_id">Train Id :</label>
+        <input type="integer" name="train_id" class="form-control">
+      </div>
+
+      <button type="submit" class="btn btn-primary">Book</button>
+
+
+    </form>
+  </div>
+
+{% endblock %}
